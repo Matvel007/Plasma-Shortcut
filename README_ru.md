@@ -46,7 +46,15 @@ cd Plasma-Shortcut
 sudo ./install.sh
 ```
 
-### Arch Linux (PKGBUILD)
+### Arch Linux (AUR)
+
+```bash
+yay -S plasma-shortcut
+# или
+paru -S plasma-shortcut
+```
+
+### Arch Linux (PKGBUILD вручную)
 
 ```bash
 makepkg -si
