@@ -12,6 +12,8 @@ Adds **"Create Shortcut"** and **"Edit Shortcut"** entries to the Dolphin right-
 - **Icon extraction** — automatically extracts and caches icons from `.exe` files (requires `icoutils`)
 - **Proton support** — detects installed Proton versions (GE-Proton, Steam Proton, etc.) and allows selecting one
 - **GUI dialog** — native Plasma 6 styled dialog with icon preview and runner selector
+- **Minimal UI** — clean and simple, nothing extra
+- **Native** — no dependencies on PortProton or similar tools
 - **Auto-language** — menu and dialog in English / Русский / Українська (auto-detected from system locale)
 
 ## Requirements
