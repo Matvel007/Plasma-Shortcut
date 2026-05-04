@@ -1,6 +1,6 @@
 # Plasma-Shortcut — Сервисное меню Dolphin
 
-[**English version**](README.md)
+[**English version**](README.md) | [![AUR](https://img.shields.io/aur/version/plasma-shortcut)](https://aur.archlinux.org/packages/plasma-shortcut)
 
 Добавляет пункты **«Создать ярлык»** и **«Изменить ярлык»** в контекстное меню Dolphin. Создаёт `.desktop` файлы — аналог Windows `.lnk`.
 
