@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-desktop;
+Actions=editShortcut;
+X-KDE-StartupNotify=false
+Icon=document-properties
+
+[Desktop Action editShortcut]
+Name=Edit Shortcut…
+Name[ru]=Изменить ярлык…
+Name[uk]=Змінити ярлик…
+Icon=document-properties
+Exec=PREFIX/bin/dolphin-edit-shortcut %F
