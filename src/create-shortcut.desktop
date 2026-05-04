@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin,all/all,all/allfiles
+MimeType=all/all;
+Actions=createShortcut;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+X-KDE-Submenu=Create Shortcut
+X-KDE-Submenu[ru]=Создать ярлык
+X-KDE-Submenu[uk]=Створити ярлик
+Icon=emblem-symbolic-link
+
+[Desktop Action createShortcut]
+Name=Create .desktop Shortcut
+Name[ru]=Создать .desktop ярлык
+Name[uk]=Створити .desktop ярлик
+Icon=emblem-symbolic-link
+Exec=PREFIX/bin/dolphin-create-shortcut %F
