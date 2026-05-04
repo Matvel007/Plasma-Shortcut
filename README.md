@@ -1,6 +1,6 @@
-# Create Shortcut — Dolphin Service Menu
+# Plasma-Shortcut — Dolphin Service Menu
 
-[**Русская версия**](README_ru.md)
+[**Русская версия**](README_ru.md) | [![AUR](https://img.shields.io/aur/version/plasma-shortcut)](https://aur.archlinux.org/packages/plasma-shortcut)
 
 Adds **"Create Shortcut"** and **"Edit Shortcut"** entries to the Dolphin right-click context menu. Creates `.desktop` shortcut files — the Linux equivalent of Windows `.lnk` files.
 
