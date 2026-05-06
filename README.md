@@ -35,7 +35,8 @@ sudo pacman -S icoutils pyside6
 ### Quick install (user only)
 
 ```bash
-git clone https://github.com/yourusername/Plasma-Shortcut
+git clone 
+https://github.com/Matvel007/Plasma-Shortcut
 cd Plasma-Shortcut
 ./install.sh
 ```
