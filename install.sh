@@ -63,6 +63,9 @@ chmod +x "$BIN_DIR/dolphin-create-shortcut"
 cp src/dolphin-edit-shortcut "$BIN_DIR/dolphin-edit-shortcut"
 chmod +x "$BIN_DIR/dolphin-edit-shortcut"
 
+cp src/dolphin-launch-mode "$BIN_DIR/dolphin-launch-mode"
+chmod +x "$BIN_DIR/dolphin-launch-mode"
+
 SHARE_DIR="${PREFIX}/share/create-shortcut"
 if [ "$USER_INSTALL" = "true" ]; then
     SHARE_DIR="$HOME/.local/share/create-shortcut"
@@ -70,12 +73,17 @@ fi
 mkdir -p "$SHARE_DIR"
 cp src/dolphin-shortcut-dialog.py "$SHARE_DIR/dolphin-shortcut-dialog.py"
 chmod +x "$SHARE_DIR/dolphin-shortcut-dialog.py"
+cp src/dolphin-launch-mode-dialog.py "$SHARE_DIR/dolphin-launch-mode-dialog.py"
+chmod +x "$SHARE_DIR/dolphin-launch-mode-dialog.py"
 
 sed "s|PREFIX|$PREFIX_HOME|g" src/create-shortcut.desktop > "$MENU_DIR/create-shortcut.desktop"
 chmod +x "$MENU_DIR/create-shortcut.desktop"
 
 sed "s|PREFIX|$PREFIX_HOME|g" src/edit-shortcut.desktop > "$MENU_DIR/edit-shortcut.desktop"
 chmod +x "$MENU_DIR/edit-shortcut.desktop"
+
+sed "s|PREFIX|$PREFIX_HOME|g" src/launch-mode.desktop > "$MENU_DIR/launch-mode.desktop"
+chmod +x "$MENU_DIR/launch-mode.desktop"
 
 if command -v kbuildsycoca6 &>/dev/null; then
     echo "Rebuilding KDE service cache..."

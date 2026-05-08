@@ -22,8 +22,8 @@ LANG = os.environ.get("LANG", "en_US")
 T = {}
 
 if LANG.startswith("ru"):
-    T["create_title"] = "Создать ярлык — v1.0"
-    T["edit_title"] = "Изменить ярлык — v1.0"
+    T["create_title"] = "Создать ярлык — v1.1"
+    T["edit_title"] = "Изменить ярлык — v1.1"
     T["create_header"] = "Создать ярлык для:"
     T["edit_header"] = "Изменить ярлык для:"
     T["file"] = "Файл:"
@@ -37,8 +37,8 @@ if LANG.startswith("ru"):
     T["no_icon"] = "Нет иконки"
     T["select_proton"] = "Выберите Proton"
 elif LANG.startswith("uk"):
-    T["create_title"] = "Створити ярлик — v1.0"
-    T["edit_title"] = "Змінити ярлик — v1.0"
+    T["create_title"] = "Створити ярлик — v1.1"
+    T["edit_title"] = "Змінити ярлик — v1.1"
     T["create_header"] = "Створити ярлик для:"
     T["edit_header"] = "Змінити ярлик для:"
     T["file"] = "Файл:"
@@ -52,8 +52,8 @@ elif LANG.startswith("uk"):
     T["no_icon"] = "Немає іконки"
     T["select_proton"] = "Виберіть Proton"
 else:
-    T["create_title"] = "Create Shortcut — v1.0"
-    T["edit_title"] = "Edit Shortcut — v1.0"
+    T["create_title"] = "Create Shortcut — v1.1"
+    T["edit_title"] = "Edit Shortcut — v1.1"
     T["create_header"] = "Create Shortcut for:"
     T["edit_header"] = "Edit Shortcut for:"
     T["file"] = "File:"
@@ -69,8 +69,9 @@ else:
     T["about_title"] = "About Plasma-Shortcut"
     T["about_btn"] = "Info"
     T["about_text"] = (
-        "<b>Plasma-Shortcut v1.0</b><br><br>"
-        "A Dolphin Service Menu for creating and editing .desktop shortcuts.<br><br>"
+        "<b>Plasma-Shortcut v1.1</b><br><br>"
+        "A Dolphin Service Menu for creating and editing .desktop shortcuts "
+        "with GPU launch mode selector.<br><br>"
         "License: GNU GPL v2<br>"
         "Author: <a href='https://github.com/Matvel007'>Matvel007</a><br>"
         "Built with: DeepSeek-v4-flash<br><br>"
@@ -81,8 +82,9 @@ if LANG.startswith("ru"):
     T["about_title"] = "О программе Plasma-Shortcut"
     T["about_btn"] = "Инфо"
     T["about_text"] = (
-        "<b>Plasma-Shortcut v1.0</b><br><br>"
-        "Сервисное меню Dolphin для создания и редактирования .desktop ярлыков.<br><br>"
+        "<b>Plasma-Shortcut v1.1</b><br><br>"
+        "Сервисное меню Dolphin для создания и редактирования .desktop ярлыков "
+        "с выбором режима запуска GPU.<br><br>"
         "Лицензия: GNU GPL v2<br>"
         "Создатель: <a href='https://github.com/Matvel007'>Matvel007</a><br>"
         "Создано с помощью: DeepSeek-v4-flash<br><br>"
@@ -92,8 +94,9 @@ elif LANG.startswith("uk"):
     T["about_title"] = "Про програму Plasma-Shortcut"
     T["about_btn"] = "Інфо"
     T["about_text"] = (
-        "<b>Plasma-Shortcut v1.0</b><br><br>"
-        "Сервісне меню Dolphin для створення та редагування .desktop ярликів.<br><br>"
+        "<b>Plasma-Shortcut v1.1</b><br><br>"
+        "Сервісне меню Dolphin для створення та редагування .desktop ярликів "
+        "з вибором режиму запуску GPU.<br><br>"
         "Ліцензія: GNU GPL v2<br>"
         "Автор: <a href='https://github.com/Matvel007'>Matvel007</a><br>"
         "Створено за допомогою: DeepSeek-v4-flash<br><br>"

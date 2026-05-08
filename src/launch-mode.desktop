@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-desktop;
+Actions=launchMode;
+X-KDE-StartupNotify=false
+Icon=preferences-system
+
+[Desktop Action launchMode]
+Name=Configure Launch Mode…
+Name[ru]=Режим запуска…
+Name[uk]=Режим запуску…
+Icon=preferences-system
+Exec=PREFIX/bin/dolphin-launch-mode %F
