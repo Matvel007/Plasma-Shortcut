@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for shortcut_path in "$@"; do
+    if [ ! -f "$shortcut_path" ]; then
+        continue
+    fi
+
+    SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+    DIALOG="$SCRIPT_DIR/dolphin-launch-mode-dialog.py"
+    if [ ! -f "$DIALOG" ]; then
+        DIALOG="$(dirname "$SCRIPT_DIR")/share/create-shortcut/dolphin-launch-mode-dialog.py"
+    fi
+
+    if command -v python3 &>/dev/null && [ -f "$DIALOG" ]; then
+        python3 "$DIALOG" "$shortcut_path"
+    fi
+done
