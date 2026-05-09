@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-ms-dos-executable;application/x-msdownload;
+Actions=extractIcon;
+X-KDE-Priority=TopLevel
+X-KDE-StartupNotify=false
+Icon=image-x-icon
+
+[Desktop Action extractIcon]
+Name=Extract Icon
+Name[ru]=Извлечь иконку
+Name[uk]=Витягти іконку
+Icon=image-x-icon
+Exec=PREFIX/bin/dolphin-extract-icon %F

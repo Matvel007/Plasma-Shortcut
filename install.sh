@@ -66,6 +66,9 @@ chmod +x "$BIN_DIR/dolphin-edit-shortcut"
 cp src/dolphin-launch-mode "$BIN_DIR/dolphin-launch-mode"
 chmod +x "$BIN_DIR/dolphin-launch-mode"
 
+cp src/dolphin-extract-icon "$BIN_DIR/dolphin-extract-icon"
+chmod +x "$BIN_DIR/dolphin-extract-icon"
+
 SHARE_DIR="${PREFIX}/share/create-shortcut"
 if [ "$USER_INSTALL" = "true" ]; then
     SHARE_DIR="$HOME/.local/share/create-shortcut"
@@ -84,6 +87,9 @@ chmod +x "$MENU_DIR/edit-shortcut.desktop"
 
 sed "s|PREFIX|$PREFIX_HOME|g" src/launch-mode.desktop > "$MENU_DIR/launch-mode.desktop"
 chmod +x "$MENU_DIR/launch-mode.desktop"
+
+sed "s|PREFIX|$PREFIX_HOME|g" src/extract-icon.desktop > "$MENU_DIR/extract-icon.desktop"
+chmod +x "$MENU_DIR/extract-icon.desktop"
 
 if command -v kbuildsycoca6 &>/dev/null; then
     echo "Rebuilding KDE service cache..."

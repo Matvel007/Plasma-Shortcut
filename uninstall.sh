@@ -17,9 +17,11 @@ echo "Uninstalling Create Shortcut Service Menu..."
 rm -f "$BIN_DIR/dolphin-create-shortcut"
 rm -f "$BIN_DIR/dolphin-edit-shortcut"
 rm -f "$BIN_DIR/dolphin-launch-mode"
+rm -f "$BIN_DIR/dolphin-extract-icon"
 rm -f "$MENU_DIR/create-shortcut.desktop"
 rm -f "$MENU_DIR/edit-shortcut.desktop"
 rm -f "$MENU_DIR/launch-mode.desktop"
+rm -f "$MENU_DIR/extract-icon.desktop"
 
 if command -v kbuildsycoca6 &>/dev/null; then
     kbuildsycoca6

@@ -12,6 +12,7 @@ Adds **"Create Shortcut"**, **"Edit Shortcut"** and **"Launch Mode"** entries to
 - **GPU auto-detection** — automatically detects Intel integrated and NVIDIA discrete GPUs
 - **.exe support** — creates `Type=Application` shortcuts (works via Wine or Proton)
 - **Icon extraction** — automatically extracts and caches icons from `.exe` files (requires `icoutils`)
+- **Extract Icon** — right-click any `.exe` → extract icon as PNG to the same directory
 - **Proton support** — detects installed Proton versions (GE-Proton, Steam Proton, etc.) and allows selecting one
 - **GUI dialog** — native Plasma 6 styled dialog with icon preview and runner selector
 - **Minimal UI** — clean and simple, nothing extra
