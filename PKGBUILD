@@ -2,14 +2,14 @@
 pkgname=plasma-shortcut
 pkgver=1.1
 pkgrel=1
-pkgdesc="Plasma GUI service menu for creating/editing .desktop shortcuts + GPU launch mode selector. Supports any file, .exe with Wine/Proton, auto-extracts icons / Plasma GUI сервисное меню для создания .desktop ярлыков + выбор режима запуска GPU. Любые файлы, .exe через Wine/Proton, авто-извлечение иконок"
+pkgdesc="Dolphin service menu: .desktop shortcuts + GPU launch mode (Intel/NVIDIA). Wine/Proton/Flatpak support / Сервисное меню Dolphin: ярлыки .desktop + режим GPU (Intel/NVIDIA). Wine/Proton/Flatpak"
 arch=('any')
 url="https://github.com/Matvel007/Plasma-Shortcut"
 license=('GPL2')
 depends=('kio' 'icoutils' 'pyside6')
 install=plasma-shortcut.install
 source=("$pkgname-$pkgver.tar.gz::https://github.com/Matvel007/Plasma-Shortcut/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('ef1576817ff5f64d9c82f88b4f347473e69e5a14c4b219561e65529e84a68c57')
+sha256sums=('70d0ff130c96e21f8a29940ebb410b4b9b00bced153ca16627dd7f1edf5636cb')
 
 package() {
     cd "$srcdir/Plasma-Shortcut-$pkgver"
@@ -21,6 +21,9 @@ package() {
 
     install -Dm755 src/dolphin-launch-mode \
         "$pkgdir/usr/local/bin/dolphin-launch-mode"
+
+    install -Dm755 src/dolphin-extract-icon \
+        "$pkgdir/usr/local/bin/dolphin-extract-icon"
 
     install -Dm755 src/dolphin-shortcut-dialog.py \
         "$pkgdir/usr/local/share/create-shortcut/dolphin-shortcut-dialog.py"
@@ -40,4 +43,8 @@ package() {
     sed "s|PREFIX|/usr/local|g" src/launch-mode.desktop \
         > "$pkgdir/usr/share/kio/servicemenus/launch-mode.desktop"
     chmod 644 "$pkgdir/usr/share/kio/servicemenus/launch-mode.desktop"
+
+    sed "s|PREFIX|/usr/local|g" src/extract-icon.desktop \
+        > "$pkgdir/usr/share/kio/servicemenus/extract-icon.desktop"
+    chmod 644 "$pkgdir/usr/share/kio/servicemenus/extract-icon.desktop"
 }

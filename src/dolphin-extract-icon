@@ -1,0 +1,30 @@
+#! /usr/bin/bash
+# dolphin-extract-icon — extract icon from .exe → PNG next to it
+
+for exe_path in "$@"; do
+    if [ ! -f "$exe_path" ]; then
+        continue
+    fi
+
+    ico_dir="$HOME/.local/share/create-shortcut/icons"
+    mkdir -p "$ico_dir"
+    hash=$(echo -n "$exe_path" | md5sum | awk '{print $1}')
+    cached_png="$ico_dir/$hash.png"
+
+    if wrestool -x --type=14 "$exe_path" 2>/dev/null | icotool -x -o /tmp/ 2>/dev/null; then
+        png=$(ls -1S /tmp/*.png 2>/dev/null | head -1)
+        if [ -n "$png" ]; then
+            cp "$png" "$cached_png"
+            rm -f /tmp/*.png 2>/dev/null
+        fi
+    fi
+
+    if [ -f "$cached_png" ]; then
+        target_dir=$(dirname "$exe_path")
+        base=$(basename "$exe_path" .exe)
+        cp "$cached_png" "$target_dir/$base.png"
+        if command -v notify-send &>/dev/null; then
+            notify-send "Icon Extracted" "Saved: $target_dir/$base.png"
+        fi
+    fi
+done
